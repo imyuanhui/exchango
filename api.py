@@ -1,11 +1,8 @@
-from dotenv import load_dotenv
-import os
 import requests
-
+import keys
 
 # Get api key from the .env file
-load_dotenv()
-API_KEY = os.getenv('API_KEY')
+API_KEY = keys.API_KEY
 
 if not API_KEY:
     raise ValueError("API key not found.")
